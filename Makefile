@@ -41,7 +41,7 @@ fclean:			clean
 re:				fclean all
 
 coding-style:
-				coding-stlye . .
+				coding-style . .
 				cat *.log
 				$(RM) *.log
 
