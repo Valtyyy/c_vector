@@ -15,4 +15,9 @@ void my_memset(void *ptr, int value, size_t count);
 void *my_realloc(void *ptr, ssize_t size, ssize_t new_size);
 void vector_destroy_fixed(vector_t **src);
 
+typedef enum {
+    FAIL = 84,
+    SUCCESS = 0
+} state_t;
+
 #endif
