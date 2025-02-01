@@ -46,6 +46,6 @@ coding-style:
 				$(RM) *.log
 
 debug:			CPPFLAGS += -ggdb3
-debug:			all
+debug:			dev
 
 .PHONY:			$(NAME)	dev all clean fclean re coding-style debug
