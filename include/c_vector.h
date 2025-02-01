@@ -15,5 +15,6 @@ ssize_t vector_push(vector_t *vector, void *element);
 void *vector_at(vector_t *vector, ssize_t index);
 void vector_destroy(vector_t *src);
 void vector_clear(vector_t *vector);
+void vector_pop(vector_t *vector);
 
 #endif
