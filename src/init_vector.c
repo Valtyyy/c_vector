@@ -12,7 +12,7 @@
 vector_t *init_vector(ssize_t len, ssize_t element_size)
 {
     vector_t *vec = malloc(sizeof(vector_t));
-    
+
     if (!vec)
         return NULL;
     vec->len = len;

@@ -8,7 +8,7 @@
 #include "c_vector.h"
 #include "struct.h"
 
-void vector_destroy__(vector_t **src)
+void vector_destroy_fixed(vector_t **src)
 {
     vector_destroy(*src);
 }
