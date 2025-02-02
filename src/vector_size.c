@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** vector_size
 ** File description:
-** return the real size in memory taken by filled vector
+** return the real size in memory taken by filled vector data
 */
 
 #include "struct.h"
