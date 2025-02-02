@@ -13,10 +13,8 @@
 int vector_erase(vector_t *vector, ssize_t index)
 {
     void *dest = NULL;
-    void *data_to_move = malloc(vector->element_size * vector->len);
+    unsigned char data_to_move[vector->element_size * vector->len];
 
-    if (!data_to_move)
-        return FAIL;
     if (index == vector->size - 1) {
         vector_pop(vector);
         return SUCCESS;
@@ -30,6 +28,5 @@ int vector_erase(vector_t *vector, ssize_t index)
     my_memcpy(dest, data_to_move,
         vector->element_size * (vector->len - index));
     vector->size -= 1;
-    free(data_to_move);
     return SUCCESS;
 }
