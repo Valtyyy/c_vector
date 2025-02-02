@@ -17,5 +17,6 @@ void vector_destroy(vector_t *src);
 void vector_clear(vector_t *vector);
 void vector_pop(vector_t *vector);
 int vector_erase(vector_t *vector, ssize_t index);
+ssize_t vector_size(vector_t *vector);
 
 #endif
