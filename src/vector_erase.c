@@ -13,7 +13,7 @@
 int vector_erase(vector_t *vector, ssize_t index)
 {
     void *dest = NULL;
-    unsigned char data_to_move[vector->element_size * vector->len];
+    unsigned char data_to_move[vector_maxsize(vector)];
 
     if (index == vector->size - 1) {
         vector_pop(vector);
