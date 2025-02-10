@@ -6,7 +6,7 @@
 */
 
 #include <stdlib.h>
-#include "struct.h"
+#include "c_vector.h"
 
 void vector_destroy(vector_t *src)
 {

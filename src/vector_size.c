@@ -5,8 +5,8 @@
 ** return the real size in memory taken by filled vector data
 */
 
-#include "struct.h"
 #include <stdlib.h>
+#include "c_vector.h"
 
 ssize_t vector_size(vector_t *vector)
 {

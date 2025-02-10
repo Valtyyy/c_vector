@@ -5,7 +5,6 @@
 ** create vector_t type in heap and return pointer result
 */
 
-#include "struct.h"
 #include <stdlib.h>
 #include "project.h"
 

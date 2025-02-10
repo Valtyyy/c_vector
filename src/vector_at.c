@@ -5,8 +5,8 @@
 ** take an index and return corresponding addr
 */
 
-#include "struct.h"
 #include <stdio.h>
+#include "c_vector.h"
 
 void *vector_at(vector_t *vector, ssize_t index)
 {

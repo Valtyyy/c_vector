@@ -5,8 +5,8 @@
 ** delete last element of the vector
 */
 
-#include "struct.h"
 #include "project.h"
+#include "c_vector.h"
 
 void vector_pop(vector_t *vector)
 {

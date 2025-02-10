@@ -5,7 +5,7 @@
 ** return the literal size in memory taken by vector->data
 */
 
-#include "struct.h"
+#include "c_vector.h"
 
 ssize_t vector_maxsize(vector_t *vector)
 {

@@ -6,7 +6,6 @@
 */
 
 #include "c_vector.h"
-#include "struct.h"
 #include "project.h"
 #include <stdlib.h>
 

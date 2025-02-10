@@ -5,8 +5,8 @@
 ** clear all data in a vector_t
 */
 
-#include "struct.h"
 #include "project.h"
+#include "c_vector.h"
 
 void vector_clear(vector_t *vector)
 {
