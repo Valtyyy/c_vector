@@ -7,6 +7,7 @@
 
 #ifndef PROJECT_H_
     #define PROJECT_H_
+    #include "c_vector.h"
     #include <stdlib.h>
 
 int my_memcpy(void *dest, void *src, ssize_t size);
