@@ -7,8 +7,15 @@
 
 #ifndef C_VECTOR_H_
     #define C_VECTOR_H_
-    #include "project.h"
+    #include <stdlib.h>
     #define V_AUTOFREE __attribute__((cleanup(vector_destroy_fixed)))
+
+typedef struct {
+    ssize_t size;
+    ssize_t element_size;
+    ssize_t len;
+    void *data;
+} vector_t;
 
 vector_t *init_vector(ssize_t len, ssize_t element_size);
 ssize_t vector_push(vector_t *vector, void *element);
