@@ -27,5 +27,6 @@ int vector_erase(vector_t *vector, ssize_t index);
 ssize_t vector_size(vector_t *vector);
 ssize_t vector_maxsize(vector_t *vector);
 void vector_destroy_fixed(vector_t **src);
+ssize_t vector_search(vector_t *vector, void *target);
 
 #endif
