@@ -15,7 +15,6 @@ bool my_memcmp(void *ptr_a, void *ptr_b, ssize_t size)
     unsigned char *b = (unsigned char *)ptr_b;
 
     for (ssize_t i = 0; i < size; i++) {
-        printf("%c\n", a[i]);
         if (a[i] != b[i])
             return false;
     }
