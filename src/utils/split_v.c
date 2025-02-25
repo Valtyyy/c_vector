@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2025
-** split
+** split_v
 ** File description:
 ** split string by given filter and return vector_t (data->char**)
 */
@@ -9,19 +9,19 @@
 #include "project.h"
 
 static float splitter_mode(char *src, ssize_t index, char *filtre,
-    vsplit_mode_t mode)
+    split_mode_v_t mode)
 {
-    if (mode == STRICT)
+    if (mode == STRICT_V)
         return src[index] == '\0' ||
             my_str_contain(filtre, src[index]);
-    if (mode == LEGACY)
+    if (mode == LEGACY_V)
         return src[index] == '\0' ||
             (my_str_contain(filtre, src[index]) &&
             !my_str_contain(filtre, src[index + 1]));
     return 0;
 }
 
-vector_t *split(char *src, char *filtre, vsplit_mode_t mode)
+vector_t *split_v(char *src, char *filtre, split_mode_v_t mode)
 {
     vector_t *res = init_vector(4, sizeof(char *));
     char buffer[4096] = {0};

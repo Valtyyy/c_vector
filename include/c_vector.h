@@ -18,9 +18,9 @@ typedef struct {
 } vector_t;
 
 typedef enum {
-    LEGACY = 0,
-    STRICT = 1,
-} vsplit_mode_t;
+    LEGACY_V = 0,
+    STRICT_V = 1,
+} split_mode_v_t;
 
 vector_t *init_vector(ssize_t len, ssize_t element_size);
 ssize_t vector_push(vector_t *vector, void *element);
