@@ -27,12 +27,14 @@ vector_t *split_v(char *src, char *filtre, split_mode_v_t mode)
     char buffer[4096] = {0};
     ssize_t j = 0;
     ssize_t strlen = my_strlen(src) + 1;
+    char *buffer_heap = NULL;
 
     for (ssize_t i = 0; i < strlen; ++i) {
         if (splitter_mode(src, i, filtre, mode)) {
             buffer[j] = 0;
             strstrip(buffer, filtre);
-            vector_push(res, &buffer);
+            buffer_heap = my_strdup(buffer);
+            vector_push(res, &buffer_heap);
             j = 0;
             continue;
         }

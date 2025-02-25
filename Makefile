@@ -5,8 +5,11 @@
 ## Makefile
 ##
 
+
 rwildcard		=	$(foreach d,$(wildcard $(1:=/*)),$(call rwildcard,$d,$2) \
 					$(filter $(subst *,%,$2),$d))
+
+CC				=	cc
 
 LIB_PATH		=	lib/
 
@@ -30,7 +33,7 @@ $(NAME):		$(OBJ)
 				$(AR) rcs $(NAME) $(OBJ)
 
 dev:			$(NAME) $(OBJ_DEV)
-				gcc $(CFLAGS) $(OBJ_DEV) $(NAME) -o dev
+				$(CC) $(CFLAGS) $(OBJ_DEV) $(NAME) -o dev
 
 clean:
 				$(RM) $(OBJ)
