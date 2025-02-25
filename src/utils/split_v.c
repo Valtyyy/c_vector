@@ -21,20 +21,30 @@ static float splitter_mode(char *src, ssize_t index, char *filtre,
     return 0;
 }
 
+void add_content_handler(vector_t *vec, char *src)
+{
+    char *copy = NULL;
+
+    if (*src == 0)
+        return;
+    copy = my_strdup(src);
+    if (!copy)
+        return;
+    vector_push(vec, &copy);
+}
+
 vector_t *split_v(char *src, char *filtre, split_mode_v_t mode)
 {
     vector_t *res = init_vector(4, sizeof(char *));
     char buffer[4096] = {0};
     ssize_t j = 0;
     ssize_t strlen = my_strlen(src) + 1;
-    char *buffer_heap = NULL;
 
     for (ssize_t i = 0; i < strlen; ++i) {
         if (splitter_mode(src, i, filtre, mode)) {
             buffer[j] = 0;
             strstrip(buffer, filtre);
-            buffer_heap = my_strdup(buffer);
-            vector_push(res, &buffer_heap);
+            add_content_handler(res, buffer);
             j = 0;
             continue;
         }
