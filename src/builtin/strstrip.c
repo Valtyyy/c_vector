@@ -7,7 +7,7 @@
 
 #include "project.h"
 
-char *strstrip(char *src, char *filter)
+char *strstrip(char *src, char const *filter)
 {
     int src_len = my_strlen(src) + 1;
     char copy[src_len];

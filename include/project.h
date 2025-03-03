@@ -17,7 +17,7 @@ void *my_realloc(void *ptr, ssize_t size, ssize_t new_size);
 bool my_memcmp(void *ptr_a, void *ptr_b, ssize_t size);
 int my_str_contain(char const *src, char const target);
 int my_strlen(char const *str);
-char *strstrip(char *src, char *filter);
+char *strstrip(char *src, char const *filter);
 char *my_strcpy(char *dest, char const *src);
 char *my_strdup(char const *src);
 

@@ -9,6 +9,6 @@
     #define HEADER_H_
     #include "c_vector.h"
 
-vector_t *split_v(char *src, char *filtre, split_mode_v_t mode);
+vector_t *split_v(char const *src, char const *filtre, split_mode_v_t mode);
 
 #endif

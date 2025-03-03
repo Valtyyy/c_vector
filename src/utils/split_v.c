@@ -8,7 +8,7 @@
 #include "c_vector.h"
 #include "project.h"
 
-static float splitter_mode(char *src, ssize_t index, char *filtre,
+static float splitter_mode(char const *src, ssize_t index, char const *filtre,
     split_mode_v_t mode)
 {
     if (mode == STRICT_V)
@@ -33,7 +33,7 @@ void add_content_handler(vector_t *vec, char *src)
     vector_push(vec, &copy);
 }
 
-vector_t *split_v(char *src, char *filtre, split_mode_v_t mode)
+vector_t *split_v(char const *src, char const *filtre, split_mode_v_t mode)
 {
     vector_t *res = init_vector(4, sizeof(char *));
     char buffer[4096] = {0};
