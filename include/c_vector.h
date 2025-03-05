@@ -9,6 +9,7 @@
     #define C_VECTOR_H_
     #include <stdlib.h>
     #define V_AUTOFREE __attribute__((cleanup(vector_destroy_fixed)))
+    #define VH_AUTOFREE __attribute__((cleanup(vector_destroy_ptr_fixed)))
 
 typedef struct {
     ssize_t size;
@@ -33,5 +34,6 @@ ssize_t vector_size(vector_t *vector);
 ssize_t vector_maxsize(vector_t *vector);
 void vector_destroy_fixed(vector_t **src);
 ssize_t vector_search(vector_t *vector, void *target);
+void vector_destroy_ptr_fixed(vector_t **self);
 
 #endif
