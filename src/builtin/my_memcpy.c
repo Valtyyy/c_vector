@@ -7,7 +7,7 @@
 
 #include "stdlib.h"
 
-int my_memcpy(void *dest, void *src, ssize_t size)
+int my_memcpy(void *dest, const void *src, ssize_t size)
 {
     unsigned char *dest_octal = (unsigned char *)dest;
     unsigned char *src_octal = (unsigned char *)src;

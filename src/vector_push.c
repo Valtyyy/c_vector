@@ -9,7 +9,7 @@
 #include "project.h"
 #include "c_vector.h"
 
-ssize_t vector_push(vector_t *vector, void *element)
+ssize_t vector_push(vector_t *vector, void const *element)
 {
     void *dest = NULL;
 

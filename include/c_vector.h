@@ -24,7 +24,7 @@ typedef enum {
 } split_mode_v_t;
 
 vector_t *init_vector(ssize_t len, ssize_t element_size);
-ssize_t vector_push(vector_t *vector, void *element);
+ssize_t vector_push(vector_t *vector, const void *element);
 void *vector_at(vector_t *vector, ssize_t index);
 void vector_destroy(vector_t *src);
 void vector_clear(vector_t *vector);
