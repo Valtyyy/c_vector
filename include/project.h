@@ -5,10 +5,9 @@
 ** interface for relative project
 */
 
-#ifndef PROJECT_H_
-    #define PROJECT_H_
+#ifndef CVECTOR_PROJECT_H_
+    #define CVECTOR_PROJECT_H_
     #include "c_vector.h"
-    #include <stdlib.h>
     #include <stdbool.h>
 
 int my_memcpy(void *dest, const void *src, ssize_t size);
