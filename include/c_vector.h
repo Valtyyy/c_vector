@@ -36,5 +36,6 @@ void vector_destroy_fixed(vector_t **src);
 ssize_t vector_search(vector_t *vector, void *target);
 void vector_destroy_ptr_fixed(vector_t **self);
 vector_t *vector_duplicate(vector_t *self);
+int vector_popback(vector_t *self);
 
 #endif
