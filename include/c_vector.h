@@ -10,6 +10,7 @@
     #include <stdlib.h>
     #define V_AUTOFREE __attribute__((cleanup(vector_destroy_fixed)))
     #define VH_AUTOFREE __attribute__((cleanup(vector_destroy_ptr_fixed)))
+    #define VECTOR_DATA(vec, type) ((type *)(vec)->data)
 
 typedef struct {
     ssize_t size;
