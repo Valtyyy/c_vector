@@ -9,6 +9,6 @@
     #define CVECTORDUP_H_
     #include "c_vector.h"
 
-vector_t *splitarray_dup(vector_t *src);
+const void *splitarray_dup(void *src);
 
 #endif

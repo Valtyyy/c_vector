@@ -14,13 +14,14 @@ const void *my_strdup_wrapper(void *src)
     return my_strdup((const char *)src);
 }
 
-vector_t *splitarray_dup(vector_t *src)
+const void *splitarray_dup(void *src)
 {
+    vector_t *vec = (vector_t *)src;
     vector_t *cpy = init_vector(1, sizeof(vector_t *));
-    vector_t **curr = VECTOR_DATA(src, vector_t *);
+    vector_t **curr = VECTOR_DATA(vec, vector_t *);
     vector_t *buff = NULL;
 
-    for (ssize_t i = 0; i < src->size; i++) {
+    for (ssize_t i = 0; i < vec->size; i++) {
         buff = vector_duplicate(curr[i], my_strdup_wrapper);
         if (!buff)
             return NULL;
