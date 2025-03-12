@@ -6,8 +6,9 @@
 */
 
 #include "c_vector.h"
+#include "c_vector_dup.h"
 #include "project.h"
-#include <stddef.h>
+#include <stdio.h>
 
 const void *my_strdup_wrapper(void *src)
 {
@@ -17,15 +18,6 @@ const void *my_strdup_wrapper(void *src)
 const void *splitarray_dup(void *src)
 {
     vector_t *vec = (vector_t *)src;
-    vector_t *cpy = init_vector(1, sizeof(vector_t *));
-    vector_t **curr = VECTOR_DATA(vec, vector_t *);
-    vector_t *buff = NULL;
-
-    for (ssize_t i = 0; i < vec->size; i++) {
-        buff = vector_duplicate(curr[i], my_strdup_wrapper);
-        if (!buff)
-            return NULL;
-        vector_push(cpy, &buff);
-    }
+    vector_t *cpy = vector_duplicate(vec, my_strdup_wrapper);
     return cpy;
 }

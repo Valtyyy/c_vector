@@ -31,7 +31,7 @@ void duplicate_data_from_func(vector_t *self, vector_t *cpy,
 
 vector_t *vector_duplicate(vector_t *self, const void *(*duplicate)(void *))
 {
-    vector_t *cpy = init_vector(self->len, self->element_size);
+    vector_t *cpy = init_vector(self->size, self->element_size);
 
     if (!duplicate)
         duplicate_data(self, cpy);
