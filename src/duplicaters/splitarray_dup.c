@@ -19,5 +19,6 @@ const void *splitarray_dup(void *src)
 {
     vector_t *vec = (vector_t *)src;
     vector_t *cpy = vector_duplicate(vec, my_strdup_wrapper);
+
     return cpy;
 }
