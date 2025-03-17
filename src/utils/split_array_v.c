@@ -33,6 +33,7 @@ static int add_sub(vector_t *src, vector_t *sub)
     if (!dup)
         return SUCCESS;
     vector_push(src, &dup);
+    vector_clear(sub);
     return SUCCESS;
 }
 
@@ -46,14 +47,12 @@ vector_t *split_array_v(vector_t *src, const char separator)
         return NULL;
     for (ssize_t i = 0; i < src->size; i++) {
         if (!strings[i]) {
-            vector_clear(sub);
+            add_sub(splitted, sub);
             continue;
         }
         add_string(sub, strings[i], separator);
-        if (my_str_contain(strings[i], separator) == 1) {
+        if (my_str_contain(strings[i], separator) == 1)
             add_sub(splitted, sub);
-            vector_clear(sub);
-        }
     }
     if (sub->size > 0)
         add_sub(splitted, sub);
