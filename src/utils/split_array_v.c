@@ -45,8 +45,10 @@ vector_t *split_array_v(vector_t *src, const char separator)
     if (!splitted || !src)
         return NULL;
     for (ssize_t i = 0; i < src->size; i++) {
-        if (!strings[i])
+        if (!strings[i]) {
+            vector_clear(sub);
             continue;
+        }
         add_string(sub, strings[i], separator);
         if (my_str_contain(strings[i], separator) == 1) {
             add_sub(splitted, sub);
