@@ -38,5 +38,6 @@ ssize_t vector_search(vector_t *vector, void *target);
 void vector_destroy_ptr_fixed(vector_t **self);
 int vector_popback(vector_t *self);
 vector_t *vector_duplicate(vector_t *self, const void *(*duplicate)(void *));
+vector_t *split_array_v(vector_t *src, const char separator);
 
 #endif
