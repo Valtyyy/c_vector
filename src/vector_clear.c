@@ -11,4 +11,5 @@
 void vector_clear(vector_t *vector)
 {
     my_memset(vector->data, 0, vector->element_size * vector->len);
+    vector->size = 0;
 }
