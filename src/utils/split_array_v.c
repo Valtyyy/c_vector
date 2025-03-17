@@ -13,8 +13,10 @@
 
 static int add_string(vector_t *src, vector_t *str)
 {
-    char *string = NULL;
+    char *string = VECTOR_DATA(str, char);
 
+    if (string && *string == 0)
+        return SUCCESS;
     vector_push(str, &(char){'\0'});
     string = my_strdup(str->data);
     if (!string)
@@ -26,8 +28,11 @@ static int add_string(vector_t *src, vector_t *str)
 
 static int add_sub(vector_t *src, vector_t *sub)
 {
-    vector_t *sub_dup = vector_duplicate(sub, NULL);
+    vector_t *sub_dup = NULL;
 
+    if (sub->size == 0)
+        return SUCCESS;
+    sub_dup = vector_duplicate(sub, NULL);
     if (!sub_dup)
         return FAIL;
     vector_push(src, &sub_dup);
