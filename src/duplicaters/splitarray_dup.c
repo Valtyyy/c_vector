@@ -8,7 +8,6 @@
 #include "c_vector.h"
 #include "c_vector_dup.h"
 #include "project.h"
-#include <stdio.h>
 
 const void *my_strdup_wrapper(void *src)
 {
