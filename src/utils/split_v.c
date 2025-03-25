@@ -33,6 +33,17 @@ void add_content_handler(vector_t *vec, char *src)
     vector_push(vec, &copy);
 }
 
+static bool is_valid(char const *src, vector_t *res)
+{
+    if (!res)
+        return false;
+    if (!src) {
+        vector_destroy(res);
+        return false;
+    }
+    return true;
+}
+
 vector_t *split_v(char const *src, char const *filtre, split_mode_v_t mode)
 {
     vector_t *res = init_vector(4, sizeof(char *));
@@ -40,6 +51,8 @@ vector_t *split_v(char const *src, char const *filtre, split_mode_v_t mode)
     ssize_t j = 0;
     ssize_t strlen = my_strlen(src) + 1;
 
+    if (!is_valid(src, res))
+        return NULL;
     for (ssize_t i = 0; i < strlen; ++i) {
         if (splitter_mode(src, i, filtre, mode)) {
             buffer[j] = 0;
