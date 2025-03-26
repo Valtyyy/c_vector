@@ -11,5 +11,6 @@
 
 vector_t *split_v(char const *src, char const *filtre, split_mode_v_t mode);
 vector_t *split_array_v(vector_t *src, const char *separators);
+vector_t *split_array_str_v(vector_t *src, const char **separators);
 
 #endif
