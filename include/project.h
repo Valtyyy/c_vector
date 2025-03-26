@@ -19,6 +19,10 @@ int my_strlen(char const *str);
 char *strstrip(char *src, char const *filter);
 char *my_strcpy(char *dest, char const *src);
 char *my_strdup(char const *src);
+int my_strcmp(char const *s1, char const *s2);
+char *my_strncpy(char *dest, char const *src, int n);
+char *my_strstr(char *str, char const *to_find);
+int my_strncmp(char const *s1, char const *s2, size_t n);
 
 typedef enum {
     FAIL = 84,
