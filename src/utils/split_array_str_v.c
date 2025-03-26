@@ -58,7 +58,7 @@ static int str_index_of(char *src, char const **targets, size_t *len)
 }
 
 static void deal_matrix(char *matrix, const char **separators, vector_t *sub,
-        vector_t *splitted)
+    vector_t *splitted)
 {
     V_AUTOFREE vector_t *str_buff = init_vector(1, sizeof(char));
     size_t len = 0;
