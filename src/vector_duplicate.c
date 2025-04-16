@@ -22,7 +22,7 @@ void duplicate_data_from_func(vector_t *self, vector_t *cpy,
     void *curr = NULL;
     const void *new_ptr = NULL;
 
-    for (ssize_t i = 0; i < self->size; i++) {
+    for (size_t i = 0; i < self->size; i++) {
         curr = *(void **)vector_at(self, i);
         new_ptr = duplicate(curr);
         vector_push(cpy, &new_ptr);

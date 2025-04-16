@@ -5,6 +5,7 @@
 ** set memory area to given value at src addr
 */
 
+#include <stdio.h>
 #include <stdlib.h>
 
 void my_memset(void *ptr, int value, size_t count)

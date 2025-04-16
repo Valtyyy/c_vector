@@ -10,10 +10,10 @@
     #include "c_vector.h"
     #include <stdbool.h>
 
-int my_memcpy(void *dest, const void *src, ssize_t size);
+int my_memcpy(void *dest, const void *src, size_t size);
 void my_memset(void *ptr, int value, size_t count);
-void *my_realloc(void *ptr, ssize_t size, ssize_t new_size);
-bool my_memcmp(void *ptr_a, void *ptr_b, ssize_t size);
+void *my_realloc(void *ptr, size_t size, size_t new_size);
+bool my_memcmp(void *ptr_a, void *ptr_b, size_t size);
 int my_str_contain(char const *src, char const target);
 int my_strlen(char const *str);
 char *strstrip(char *src, char const *filter);

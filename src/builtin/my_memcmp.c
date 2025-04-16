@@ -9,12 +9,12 @@
 #include <stdio.h>
 #include <sys/types.h>
 
-bool my_memcmp(void *ptr_a, void *ptr_b, ssize_t size)
+bool my_memcmp(void *ptr_a, void *ptr_b, size_t size)
 {
     unsigned char *a = (unsigned char *)ptr_a;
     unsigned char *b = (unsigned char *)ptr_b;
 
-    for (ssize_t i = 0; i < size; i++) {
+    for (size_t i = 0; i < size; i++) {
         if (a[i] != b[i])
             return false;
     }

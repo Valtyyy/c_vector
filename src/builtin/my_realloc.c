@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include "project.h"
 
-void *my_realloc(void *ptr, ssize_t size, ssize_t new_size)
+void *my_realloc(void *ptr, size_t size, size_t new_size)
 {
     void *new = malloc(new_size);
 

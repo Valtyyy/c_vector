@@ -8,7 +8,7 @@
 #include "c_vector.h"
 #include "project.h"
 
-static float splitter_mode(char const *src, ssize_t index, char const *filtre,
+static float splitter_mode(char const *src, size_t index, char const *filtre,
     split_mode_v_t mode)
 {
     if (mode == STRICT_V)
@@ -48,12 +48,12 @@ vector_t *split_v(char const *src, char const *filtre, split_mode_v_t mode)
 {
     vector_t *res = init_vector(4, sizeof(char *));
     char buffer[4096] = {0};
-    ssize_t j = 0;
-    ssize_t strlen = my_strlen(src) + 1;
+    size_t j = 0;
+    size_t strlen = my_strlen(src) + 1;
 
     if (!is_valid(src, res))
         return NULL;
-    for (ssize_t i = 0; i < strlen; ++i) {
+    for (size_t i = 0; i < strlen; ++i) {
         if (splitter_mode(src, i, filtre, mode)) {
             buffer[j] = 0;
             strstrip(buffer, filtre);

@@ -31,7 +31,7 @@ static int add_string(vector_t *src, vector_t *str)
     char *string = VECTOR_DATA(str, char);
 
     if (string && *string == 0)
-        return SUCCESS;
+       return SUCCESS;
     vector_push(str, &(char){'\0'});
     string = my_strdup(str->data);
     if (!string)
@@ -64,7 +64,7 @@ static void deal_matrix(char *matrix, const char **separators, vector_t *sub,
     size_t len = 0;
     int index = 0;
 
-    for (ssize_t i = 0; matrix[i] != 0; i++) {
+    for (size_t i = 0; matrix[i] != 0; i++) {
         index = str_index_of(&matrix[i], separators, &len);
         if (index == -1) {
             vector_push(str_buff, &matrix[i]);
@@ -86,7 +86,7 @@ vector_t *split_array_str_v(vector_t *src, const char **separators)
 
     if (!splitted || !sub)
         return NULL;
-    for (ssize_t i = 0; i < src->size; i++)
+    for (size_t i = 0; i < src->size; i++)
         deal_matrix(VECTOR_DATA(src, char *)[i], separators, sub, splitted);
     if (sub->size > 0)
         add_sub(splitted, sub);

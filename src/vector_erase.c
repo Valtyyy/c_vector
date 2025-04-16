@@ -9,7 +9,7 @@
 #include "project.h"
 #include <stdlib.h>
 
-int vector_erase(vector_t *vector, ssize_t index)
+int vector_erase(vector_t *vector, size_t index)
 {
     void *dest = NULL;
     unsigned char data_to_move[vector_maxsize(vector)];

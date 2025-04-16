@@ -12,11 +12,11 @@
 #include <stdlib.h>
 
 
-ssize_t vector_search(vector_t *vector, void *target)
+size_t vector_search(vector_t *vector, void *target)
 {
     void *curr = NULL;
 
-    for (ssize_t i = 0; i < vector->size; i++) {
+    for (size_t i = 0; i < vector->size; i++) {
         curr = vector->data + (vector->element_size * i);
         if (my_memcmp(target, curr, vector->element_size))
             return i;
