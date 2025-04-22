@@ -31,7 +31,7 @@ static int add_string(vector_t *src, vector_t *str)
     char *string = VECTOR_DATA(str, char);
 
     if (string && *string == 0)
-       return SUCCESS;
+        return SUCCESS;
     vector_push(str, &(char){'\0'});
     string = my_strdup(str->data);
     if (!string)
